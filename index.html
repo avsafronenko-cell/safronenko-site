@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Оренда, продаж та будівництво комерційної нерухомості | SafronenkoBuild</title>
+<meta name="description" content="SafronenkoBuild: девелопер повного циклу. Будівництво, продаж та оренда комерційної нерухомості. Стріт-ритейл і торгові центри з високим трафіком у Київській області та на Закарпатті.">
+<meta property="og:title" content="SafronenkoBuild | Комерційна нерухомість">
+<meta property="og:description" content="Стріт-ритейл і торгові центри з високим трафіком. 21 рік на ринку, 900+ реалізованих проєктів.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A1122'/%3E%3Ctext x='32' y='43' font-family='Georgia' font-size='30' font-weight='bold' fill='%23C9A45C' text-anchor='middle'%3ESD%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+
+<style>
+/* ============================================================
+   SafronenkoBuild redesign 2026
+   Theme: locked DARK (navy + gold, brand colors preserved)
+   Radius system: buttons = pill, cards = 18px, inputs = 12px
+   Type: Unbounded (display) / Manrope (body)
+   ============================================================ */
+:root{
+  --bg:        #080D1A;
+  --bg-2:      #0B1224;
+  --surface:   #101A33;
+  --surface-2: #14203D;
+  --line:      rgba(201,164,92,.16);
+  --line-soft: rgba(148,163,196,.10);
+  --text:      #EFEBE1;
+  --muted:     #97A0B4;
+  --gold:      #C9A45C;
+  --gold-2:    #E2C078;
+  --ink:       #0A0F1E;
+  --r-card:    18px;
+  --r-input:   12px;
+  --nav-h:     72px;
+  --ease-out:  cubic-bezier(.16,1,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:auto}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Manrope",system-ui,sans-serif;
+  font-size:16px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+::selection{background:rgba(201,164,92,.35);color:#fff}
+h1,h2,h3{font-family:"Unbounded",sans-serif;font-weight:600;line-height:1.12;letter-spacing:-.01em}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.wrap{max-width:1360px;margin-inline:auto;padding-inline:clamp(20px,4vw,56px)}
+section{position:relative}
+
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  border-radius:999px;padding:16px 30px;
+  font-weight:700;font-size:15px;letter-spacing:.01em;
+  transition:transform .3s var(--ease-out), box-shadow .3s var(--ease-out), background .3s;
+  white-space:nowrap;
+}
+.btn:active{transform:translateY(1px) scale(.98)}
+.btn-gold{
+  background:linear-gradient(135deg,var(--gold-2),var(--gold));
+  color:var(--ink);
+  box-shadow:0 10px 34px rgba(201,164,92,.22), inset 0 1px 0 rgba(255,255,255,.35);
+}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(201,164,92,.32), inset 0 1px 0 rgba(255,255,255,.35)}
+.btn-ghost{
+  border:1px solid rgba(201,164,92,.45);color:var(--text);
+  background:rgba(16,26,51,.35);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+}
+.btn-ghost:hover{transform:translateY(-2px);background:rgba(201,164,92,.12)}
+
+/* ---------- nav ---------- */
+.nav{
+  position:fixed;inset:0 0 auto 0;z-index:50;height:var(--nav-h);
+  display:flex;align-items:center;
+  background:rgba(8,13,26,.72);
+  -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line-soft);
+  transition:transform .45s var(--ease-out);
+}
+.nav.is-hidden{transform:translateY(-100%)}
+.nav-inner{display:flex;align-items:center;gap:32px;width:100%}
+.nav-logo img{height:40px;width:auto}
+.nav-links{display:flex;gap:28px;margin-inline:auto;list-style:none}
+.nav-links a{font-size:14.5px;font-weight:600;color:var(--muted);transition:color .25s}
+.nav-links a:hover{color:var(--gold-2)}
+.nav-phone{font-weight:700;font-size:15px;letter-spacing:.02em;display:flex;align-items:center;gap:8px;color:var(--text)}
+.nav-phone i{color:var(--gold);font-size:18px}
+.nav-cta{padding:11px 22px;font-size:14px}
+.burger{display:none;flex-direction:column;gap:5px;padding:8px}
+.burger span{width:24px;height:2px;background:var(--text);transition:.3s}
+.mobile-menu{
+  position:fixed;inset:var(--nav-h) 0 auto 0;z-index:49;
+  background:rgba(8,13,26,.97);border-bottom:1px solid var(--line);
+  padding:18px 24px 30px;display:none;
+}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;padding:13px 4px;font-size:17px;font-weight:600;border-bottom:1px solid var(--line-soft)}
+
+/* ---------- hero ---------- */
+.hero{
+  min-height:100dvh;
+  display:flex;align-items:center;
+  padding-top:calc(var(--nav-h) + 24px);
+  overflow:hidden;
+  background:
+    radial-gradient(1100px 700px at 68% 18%, rgba(31,48,90,.55), transparent 60%),
+    radial-gradient(900px 600px at 18% 85%, rgba(201,164,92,.08), transparent 55%),
+    var(--bg);
+}
+#scene{position:absolute;inset:0;width:100%;height:100%;display:block;opacity:0}
+.hero::after{ /* bottom fade into page bg */
+  content:"";position:absolute;inset:auto 0 0 0;height:180px;
+  background:linear-gradient(to bottom,transparent,var(--bg));pointer-events:none;
+}
+.hero-inner{position:relative;z-index:2;max-width:1020px}
+.hero h1{
+  font-size:clamp(25px,3.15vw,47px);
+  text-transform:uppercase;
+  letter-spacing:.005em;
+}
+.hero h1 .l{display:block;overflow:hidden}
+.hero h1 .l>span{display:inline-block;transform:translateY(115%)}
+.hero h1 .gold{color:var(--gold)}
+.hero-sub{
+  margin-top:26px;max-width:56ch;
+  font-size:clamp(15.5px,1.3vw,18px);color:var(--muted);
+}
+.hero-ctas{margin-top:38px;display:flex;gap:16px;flex-wrap:wrap}
+.hero-sub,.hero-ctas{opacity:0;transform:translateY(24px)}
+
+/* ---------- stats ---------- */
+.stats{padding:clamp(56px,8vw,110px) 0 clamp(40px,6vw,80px)}
+.stats-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-block:1px solid var(--line);
+}
+.stat{
+  padding:clamp(28px,3vw,48px) clamp(16px,2vw,36px);
+  border-left:1px solid var(--line);
+}
+.stat:first-child{border-left:none}
+.stat b{
+  font-family:"Unbounded";font-weight:700;
+  font-size:clamp(34px,4vw,58px);line-height:1;color:var(--gold);
+  font-variant-numeric:tabular-nums;display:block;
+}
+.stat b sup{font-size:.5em;color:var(--gold-2)}
+.stat b span{display:inline;color:inherit;font-size:inherit;font-weight:inherit;margin:0;font-variant-numeric:tabular-nums}
+.stat .lbl{display:block;margin-top:12px;color:var(--muted);font-size:14.5px;font-weight:500}
+
+/* ---------- section headers ---------- */
+.sec-head{margin-bottom:clamp(36px,4.5vw,64px)}
+.sec-head h2{font-size:clamp(26px,3.4vw,46px);max-width:20ch}
+.sec-head p{margin-top:16px;color:var(--muted);max-width:62ch}
+
+/* ---------- about ---------- */
+.about{padding:clamp(70px,9vw,140px) 0}
+.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(36px,5vw,90px);align-items:center}
+.about-text p{color:var(--muted);margin-top:18px;max-width:62ch}
+.about-text p strong{color:var(--text)}
+.about-quote{
+  margin-top:30px;padding:22px 26px;
+  border-left:2px solid var(--gold);
+  background:linear-gradient(90deg,rgba(201,164,92,.08),transparent 70%);
+  border-radius:0 var(--r-card) var(--r-card) 0;
+  font-size:17px;font-weight:600;color:var(--text);max-width:52ch;
+}
+.quote-author{display:block;margin-top:12px;font-size:14px;font-weight:500;color:var(--gold-2)}
+.about-visual{position:relative;display:flex;justify-content:center}
+.about-visual .halo{
+  position:absolute;inset:8% 6% 0;
+  background:radial-gradient(ellipse at 50% 62%, rgba(201,164,92,.20), transparent 65%);
+  filter:blur(6px);
+}
+.about-visual .frame{
+  position:absolute;inset:4% 10% 6%;
+  border:1px solid var(--line);border-radius:var(--r-card);
+  background:linear-gradient(160deg,rgba(16,26,51,.9),rgba(11,18,36,.7));
+}
+.about-visual img{position:relative;z-index:2;max-height:560px;width:auto;filter:drop-shadow(0 30px 60px rgba(0,0,0,.5))}
+
+/* ---------- services (bento) ---------- */
+.services{padding:clamp(70px,9vw,140px) 0;background:var(--bg-2)}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.b-card{
+  position:relative;border-radius:var(--r-card);overflow:hidden;
+  border:1px solid var(--line-soft);
+  background:linear-gradient(160deg,var(--surface),var(--bg-2));
+  padding:clamp(26px,2.6vw,40px);
+  min-height:280px;display:flex;flex-direction:column;justify-content:flex-end;
+  transition:border-color .35s, transform .5s var(--ease-out);
+  will-change:transform;
+}
+.b-card:hover{border-color:rgba(201,164,92,.4)}
+.b-7{grid-column:span 7}.b-5{grid-column:span 5}
+.b-card i{
+  font-size:30px;color:var(--gold);
+  width:60px;height:60px;border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(201,164,92,.10);border:1px solid var(--line);
+  margin-bottom:auto;
+}
+.b-card h3{font-size:clamp(17px,1.5vw,21px);margin-top:26px;font-weight:600;line-height:1.3}
+.b-card p{margin-top:12px;color:var(--muted);font-size:15px;max-width:52ch}
+.b-media{position:absolute;inset:0;margin:0;z-index:0;border-radius:inherit;overflow:hidden}
+.b-media img{width:100%;height:100%;object-fit:cover}
+.b-media::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(8,13,26,.94) 22%,rgba(8,13,26,.4) 60%,rgba(8,13,26,.15));
+}
+.b-card>i,.b-card>h3,.b-card>p{position:relative;z-index:1}
+.b-media-card i{background:rgba(8,13,26,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.b-gold{background:linear-gradient(150deg,rgba(201,164,92,.16),var(--surface) 55%)}
+
+/* ---------- projects (horizontal pan) ---------- */
+.projects{background:var(--bg);overflow:hidden}
+.proj-pin{padding:clamp(70px,8vw,120px) 0}
+.proj-track{display:flex;gap:clamp(20px,2.5vw,36px);align-items:stretch;padding-inline:clamp(20px,4vw,56px);width:max-content}
+.proj-head{
+  flex:0 0 auto;width:min(34vw,460px);display:flex;flex-direction:column;justify-content:center;
+}
+.proj-head h2{font-size:clamp(26px,3.2vw,44px)}
+.proj-head p{margin-top:18px;color:var(--muted);max-width:36ch}
+.proj-head .btn{margin-top:30px;align-self:flex-start}
+.p-card{flex:0 0 auto;width:min(62vw,680px);display:flex;flex-direction:column}
+.p-media{
+  border-radius:var(--r-card);overflow:hidden;aspect-ratio:16/11;
+  border:1px solid var(--line-soft);position:relative;
+}
+.p-media img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 1.1s var(--ease-out)}
+.p-card:hover .p-media img{transform:scale(1.0)}
+.p-cap{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:18px 6px 0}
+.p-cap h3{font-size:clamp(17px,1.6vw,22px)}
+.p-cap span{color:var(--muted);font-size:14px;text-align:right;max-width:32ch}
+
+/* mobile fallback: native swipe */
+@media (max-width:1023px){
+  .proj-track{width:auto;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;-webkit-overflow-scrolling:touch}
+  .proj-track::-webkit-scrollbar{display:none}
+  .proj-head{width:min(84vw,420px);scroll-snap-align:start}
+  .p-card{width:min(84vw,560px);scroll-snap-align:start}
+}
+
+/* ---------- partners marquee ---------- */
+.partners{padding:clamp(60px,8vw,110px) 0;background:var(--bg-2)}
+.partners h2{font-size:clamp(22px,2.6vw,34px);text-align:center}
+.marquee{
+  margin-top:clamp(36px,4vw,56px);overflow:hidden;position:relative;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+}
+.marquee-track{display:flex;gap:clamp(48px,6vw,110px);width:max-content;animation:marquee 36s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee img{height:64px;width:auto;opacity:.85;transition:opacity .3s;border-radius:12px}
+.marquee img:hover{opacity:1}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* ---------- contact ---------- */
+.contact{padding:clamp(70px,9vw,140px) 0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,90px);align-items:start}
+.contact-info h2{font-size:clamp(26px,3.4vw,46px);max-width:16ch}
+.contact-info>p{margin-top:18px;color:var(--muted);max-width:44ch}
+.c-lines{margin-top:34px;display:flex;flex-direction:column;gap:6px}
+.c-line{
+  display:flex;align-items:center;gap:16px;padding:16px 4px;
+  border-bottom:1px solid var(--line-soft);font-weight:600;transition:color .25s;
+}
+.c-line:hover{color:var(--gold-2)}
+.c-line i{color:var(--gold);font-size:22px}
+.c-broker{margin-top:26px;font-size:14.5px;color:var(--muted)}
+.c-broker a{color:var(--gold-2);font-weight:600;border-bottom:1px solid rgba(226,192,120,.4)}
+.form-card{
+  background:linear-gradient(165deg,var(--surface),var(--bg-2));
+  border:1px solid var(--line);border-radius:var(--r-card);
+  padding:clamp(26px,3vw,44px);
+}
+.form-card h3{font-size:20px}
+.f-row{margin-top:18px;display:flex;flex-direction:column;gap:8px}
+.f-row label{font-size:13.5px;font-weight:700;letter-spacing:.02em;color:var(--muted)}
+.f-row input,.f-row textarea{
+  background:rgba(8,13,26,.6);border:1px solid var(--line-soft);
+  border-radius:var(--r-input);padding:14px 16px;color:var(--text);
+  font:inherit;font-size:15px;transition:border-color .25s, box-shadow .25s;
+}
+.f-row input::placeholder,.f-row textarea::placeholder{color:#5d6880}
+.f-row input:focus,.f-row textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,164,92,.15)}
+.f-row textarea{min-height:96px;resize:vertical}
+.f-consent{margin-top:18px;display:flex;gap:12px;align-items:flex-start;font-size:13.5px;color:var(--muted)}
+.f-consent input{accent-color:var(--gold);width:17px;height:17px;margin-top:2px;flex:none}
+.form-card .btn{margin-top:24px;width:100%;justify-content:center}
+.f-note{margin-top:14px;font-size:13px;color:var(--muted);text-align:center}
+
+/* ---------- FAQ ---------- */
+.faq{padding:clamp(70px,9vw,130px) 0;background:var(--bg-2)}
+.faq-list{max-width:860px}
+.faq details{border-bottom:1px solid var(--line-soft)}
+.faq summary{
+  list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;
+  padding:24px 4px;cursor:pointer;font-weight:600;font-size:clamp(16px,1.4vw,18.5px);
+  transition:color .25s;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--gold-2)}
+.faq summary i{flex:none;color:var(--gold);font-size:20px;transition:transform .4s var(--ease-out)}
+.faq details[open] summary i{transform:rotate(180deg)}
+.faq details p{padding:0 44px 24px 4px;color:var(--muted);max-width:70ch}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:clamp(48px,6vw,80px) 0 36px;background:var(--bg)}
+.f-grid{display:grid;grid-template-columns:1.2fr 1fr 1.2fr;gap:clamp(30px,4vw,70px)}
+.f-brand img{height:46px;width:auto}
+.f-brand p{margin-top:18px;color:var(--muted);font-size:14.5px;max-width:34ch}
+.f-col h4{font-family:"Unbounded";font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.f-col a{display:block;padding:7px 0;color:var(--muted);font-size:15px;transition:color .25s}
+.f-col a:hover{color:var(--gold-2)}
+.f-col a i{margin-right:10px;color:var(--gold);vertical-align:-2px}
+.f-bottom{
+  margin-top:clamp(40px,5vw,64px);padding-top:24px;border-top:1px solid var(--line-soft);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  color:#66708a;font-size:13.5px;
+}
+.f-social{display:flex;gap:14px}
+.f-social a{
+  width:42px;height:42px;border-radius:999px;border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;font-size:19px;color:var(--gold);
+  transition:background .3s, transform .3s;
+}
+.f-social a:hover{background:rgba(201,164,92,.12);transform:translateY(-3px)}
+
+/* ---------- reveal ---------- */
+[data-reveal]{opacity:0;transform:translateY(30px)}
+
+/* ---------- responsive ---------- */
+@media (max-width:1023px){
+  .nav-links,.nav-phone{display:none}
+  .burger{display:flex}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .stat:nth-child(3){border-left:none}
+  .stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line)}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .about-visual{order:-1}
+  .about-visual img{max-height:420px}
+  .b-7,.b-5{grid-column:span 12}
+  .f-grid{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .hero-ctas .btn{width:100%;justify-content:center}
+  .nav-cta{display:none}
+}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .marquee-track{animation:none;transform:none}
+  [data-reveal],.hero-sub,.hero-ctas{opacity:1!important;transform:none!important}
+  .hero h1 .l>span{transform:none!important}
+  #scene{opacity:.55!important}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="nav-logo" href="#top" aria-label="SafronenkoBuild, на початок сторінки">
+      <img src="https://static.wixstatic.com/media/2292f6_9e4cab8a65dc476699ec46bc7fd0659e~mv2.png/v1/fill/w_370,h_140,al_c,q_90,enc_avif,quality_auto/gold3%201.png" alt="Safronenko Development" width="185" height="70">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">Про компанію</a></li>
+      <li><a href="#services">Послуги</a></li>
+      <li><a href="#projects">Проєкти</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Контакти</a></li>
+    </ul>
+    <a class="nav-phone" href="tel:+380730988989"><i class="ph ph-phone-call" aria-hidden="true"></i>073 098 89 89</a>
+    <a class="btn btn-gold nav-cta" href="#contact">Залишити заявку</a>
+    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="mobile-menu" id="mobileMenu" aria-label="Мобільне меню">
+  <a href="#about">Про компанію</a>
+  <a href="#services">Послуги</a>
+  <a href="#projects">Проєкти</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Контакти</a>
+  <a href="tel:+380730988989"><i class="ph ph-phone-call" aria-hidden="true"></i> 073 098 89 89</a>
+</nav>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="hero">
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="wrap hero-inner">
+    <h1>
+      <span class="l"><span>Продаж і оренда</span></span>
+      <span class="l"><span class="gold">комерційної нерухомості</span></span>
+    </h1>
+    <p class="hero-sub">Стріт-ритейл та торгові центри з високим трафіком у Київській області та на Закарпатті. Готові рішення для бізнесу та інвесторів.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-gold" href="#contact">Залишити заявку</a>
+      <a class="btn btn-ghost" href="#projects">Наші проєкти</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stats-grid" data-reveal>
+      <div class="stat"><b><span data-count="21">0</span></b><span class="lbl">рік на ринку нерухомості</span></div>
+      <div class="stat"><b><span data-count="12">0</span></b><span class="lbl">регіонів, у яких працюємо</span></div>
+      <div class="stat"><b><span data-count="900">0</span><sup>+</sup></b><span class="lbl">реалізованих проєктів</span></div>
+      <div class="stat"><b><span data-count="45.5" data-decimal="1">0</span></b><span class="lbl">тис. м² в експлуатації</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-text" data-reveal>
+      <div class="sec-head" style="margin-bottom:0">
+        <h2>Девелопер повного циклу</h2>
+      </div>
+      <p><strong>SafronenkoBuild</strong> спеціалізується на будівництві, продажу та оренді комерційної нерухомості. Ми створюємо сучасні стріт-ритейл об'єкти та торгові центри у Київській області та на Заході України.</p>
+      <p>Кожен проєкт поєднує продуману локацію, високий пішохідний трафік і стабільний дохід для власників. Ми пропонуємо не просто оренду, а комплексне управління об'єктами: від підбору орендарів до повного сервісу «під ключ».</p>
+      <div class="about-quote">
+        «Ми створюємо стабільний капітал в Україні, попри будь-які зовнішні обставини.»
+        <span class="quote-author">Василь Сафроненко, засновник компанії</span>
+      </div>
+    </div>
+    <div class="about-visual" data-reveal>
+      <div class="frame" aria-hidden="true"></div>
+      <div class="halo" aria-hidden="true"></div>
+      <img src="https://static.wixstatic.com/media/2292f6_5b0e3bb5ea9442c887493b726e99a0cd~mv2.png/v1/fill/w_810,h_1082,al_c,q_90,enc_avif,quality_auto/DSC04361-Photoroom.png" alt="Засновник компанії SafronenkoBuild" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <h2>Наші послуги</h2>
+      <p>Одна команда закриває весь цикл: земля, будівництво, орендарі, управління.</p>
+    </div>
+    <div class="bento">
+      <article class="b-card b-7 b-media-card tilt" data-reveal>
+        <figure class="b-media" aria-hidden="true">
+          <img src="assets/project-street-retail.jpg" alt="" loading="lazy">
+        </figure>
+        <i class="ph ph-buildings" aria-hidden="true"></i>
+        <h3>Будівництво комерційної нерухомості</h3>
+        <p>Зводимо сучасні об'єкти для бізнесу: стріт-ритейл і торгові центри у прохідних локаціях. Надійність, швидкість і прибутковість в основі кожного проєкту.</p>
+      </article>
+      <article class="b-card b-5 tilt" data-reveal>
+        <i class="ph ph-storefront" aria-hidden="true"></i>
+        <h3>Продаж та оренда приміщень</h3>
+        <p>Готові рішення для тих, хто хоче купити приміщення під бізнес або шукає оренду з високим трафіком і стабільними орендарями.</p>
+      </article>
+      <article class="b-card b-5 b-gold tilt" data-reveal>
+        <i class="ph ph-key" aria-hidden="true"></i>
+        <h3>Комплексне рішення «під ключ»</h3>
+        <p>Одна команда відповідає за все: від вибору локації до старту оренди. Купуйте приміщення під комерцію та повністю ним керуйте.</p>
+      </article>
+      <article class="b-card b-7 tilt" data-reveal>
+        <i class="ph ph-chart-line-up" aria-hidden="true"></i>
+        <h3>Консультація з комерційної нерухомості</h3>
+        <p>Аналіз ринку, документів та локацій для бізнесів і девелоперів. Наш досвід стане вашим орієнтиром перед інвестицією чи продажем.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section class="projects" id="projects">
+  <div class="proj-pin" id="projPin">
+    <div class="proj-track" id="projTrack">
+      <div class="proj-head">
+        <h2>Наші проєкти</h2>
+        <p>Формати, з якими ми працюємо щодня. Повне портфоліо та процес будівництва показуємо в Instagram.</p>
+        <a class="btn btn-ghost" href="https://www.instagram.com/safronenko.development" target="_blank" rel="noopener">
+          <i class="ph ph-instagram-logo" aria-hidden="true"></i>Дивитися в Instagram
+        </a>
+      </div>
+      <article class="p-card">
+        <div class="p-media"><img src="assets/project-street-retail.jpg" alt="Стріт-ритейл об'єкт із відділенням Нової Пошти" loading="lazy"></div>
+        <div class="p-cap"><h3>Стріт-ритейл</h3><span>Вулична торгівля у локаціях з високим трафіком</span></div>
+      </article>
+      <article class="p-card">
+        <div class="p-media"><img src="assets/project-spa.jpg" alt="Спа зона з басейном та шезлонгами" loading="lazy"></div>
+        <div class="p-cap"><h3>Спа зони</h3><span>Рекреаційні комплекси з басейнами та зонами відпочинку</span></div>
+      </article>
+      <article class="p-card">
+        <div class="p-media"><img src="assets/project-business.jpg" alt="Комерційна будівля з орендарями Нова Пошта та Аптека Подорожник" loading="lazy"></div>
+        <div class="p-cap"><h3>Приміщення під бізнес</h3><span>Продаж і оренда з готовими комунікаціями</span></div>
+      </article>
+      <article class="p-card">
+        <div class="p-media"><img src="assets/project-turnkey.jpg" alt="Сучасний житловий комплекс, збудований під ключ" loading="lazy" style="object-position:center 38%"></div>
+        <div class="p-cap"><h3>Об'єкти «під ключ»</h3><span>Від землі до відкриття та управління</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PARTNERS ================= -->
+<section class="partners">
+  <div class="wrap" data-reveal>
+    <h2>Нам довіряють</h2>
+  </div>
+  <div class="marquee" data-reveal aria-label="Логотипи партнерів">
+    <div class="marquee-track" id="marqueeTrack">
+      <img src="https://static.wixstatic.com/media/2292f6_22483de5804942a6a9891e89904ba6d8~mv2.png/v1/fit/w_380,h_380,q_90,enc_avif,quality_auto/2292f6_22483de5804942a6a9891e89904ba6d8~mv2.png" alt="Партнер SafronenkoBuild" loading="lazy">
+      <img src="https://static.wixstatic.com/media/2292f6_6f4bfa69923c44f4abd13fb717b49a59~mv2.png/v1/fit/w_380,h_380,q_90,enc_avif,quality_auto/2292f6_6f4bfa69923c44f4abd13fb717b49a59~mv2.png" alt="Партнер SafronenkoBuild" loading="lazy">
+      <img src="https://static.wixstatic.com/media/2292f6_166699c2d41043e0a45c921e67926bfb~mv2.png/v1/fit/w_380,h_380,q_90,enc_avif,quality_auto/2292f6_166699c2d41043e0a45c921e67926bfb~mv2.png" alt="Партнер SafronenkoBuild" loading="lazy">
+      <img src="https://static.wixstatic.com/media/2292f6_8bd96ad043304e40aff6105d55c13870~mv2.png/v1/fit/w_380,h_380,q_90,enc_avif,quality_auto/2292f6_8bd96ad043304e40aff6105d55c13870~mv2.png" alt="Партнер SafronenkoBuild" loading="lazy">
+      <img src="https://static.wixstatic.com/media/2292f6_095d85b4a9af40b8ac3a3ff2ef0a6b99~mv2.png/v1/fit/w_380,h_380,q_90,enc_avif,quality_auto/2292f6_095d85b4a9af40b8ac3a3ff2ef0a6b99~mv2.png" alt="Партнер SafronenkoBuild" loading="lazy">
+      <img src="https://static.wixstatic.com/media/2292f6_443da22b324746c0885261e78f19f656~mv2.png/v1/fit/w_380,h_380,q_90,enc_avif,quality_auto/2292f6_443da22b324746c0885261e78f19f656~mv2.png" alt="Партнер SafronenkoBuild" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info" data-reveal>
+      <h2>Час записатися на консультацію</h2>
+      <p>Залиште контакти, і ми відповімо на всі запитання щодо купівлі, оренди чи будівництва.</p>
+      <div class="c-lines">
+        <a class="c-line" href="tel:+380730988989"><i class="ph ph-phone-call" aria-hidden="true"></i>073 098 89 89</a>
+        <a class="c-line" href="mailto:safronenkobuild@gmail.com"><i class="ph ph-envelope-simple" aria-hidden="true"></i>safronenkobuild@gmail.com</a>
+        <span class="c-line"><i class="ph ph-map-pin" aria-hidden="true"></i>вул. Басейна, буд. 9, кім. 3</span>
+      </div>
+      <p class="c-broker">Ви брокер? <a href="mailto:safronenkobuild@gmail.com?subject=Комісія%20брокера">Напишіть нам</a> та отримайте комісію за приведеного клієнта.</p>
+    </div>
+    <form class="form-card" id="leadForm" data-reveal novalidate>
+      <h3>Залишити заявку</h3>
+      <div class="f-row">
+        <label for="fName">Ім'я *</label>
+        <input id="fName" name="name" type="text" required autocomplete="name" placeholder="Ваше ім'я">
+      </div>
+      <div class="f-row">
+        <label for="fPhone">Телефон *</label>
+        <input id="fPhone" name="phone" type="tel" required autocomplete="tel" placeholder="+380">
+      </div>
+      <div class="f-row">
+        <label for="fEmail">Email *</label>
+        <input id="fEmail" name="email" type="email" required autocomplete="email" placeholder="name@email.com">
+      </div>
+      <div class="f-row">
+        <label for="fMsg">Коментар</label>
+        <textarea id="fMsg" name="message" placeholder="Що вас цікавить?"></textarea>
+      </div>
+      <label class="f-consent">
+        <input type="checkbox" required id="fConsent">
+        <span>Даю згоду на обробку моїх персональних даних *</span>
+      </label>
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-gold" type="submit" id="submitBtn">Надіслати</button>
+      <p class="f-note" id="formNote">Заявка одразу надходить на пошту компанії.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head" data-reveal><h2>Поширені запитання</h2></div>
+    <div class="faq-list" data-reveal>
+      <details>
+        <summary>Як купити комерційну нерухомість у вашій компанії? <i class="ph ph-caret-down" aria-hidden="true"></i></summary>
+        <p>Ми пропонуємо прозору схему: вибір об'єкта, аудит документів, укладення договору та супровід угоди. Так ви можете безпечно купити комерційну нерухомість із готовим доходом.</p>
+      </details>
+      <details>
+        <summary>Які умови оренди комерційної нерухомості ви пропонуєте? <i class="ph ph-caret-down" aria-hidden="true"></i></summary>
+        <p>Умови гнучкі: тривалі та короткострокові договори, прозорі тарифи, стабільні платежі. Наша оренда комерційної нерухомості допомагає бізнесу стартувати без ризиків.</p>
+      </details>
+      <details>
+        <summary>Як відбувається продаж нерухомості через вашу компанію? <i class="ph ph-caret-down" aria-hidden="true"></i></summary>
+        <p>Ми здійснюємо повний супровід: від оцінки та підготовки документів до укладання угоди. Продаж комерційного приміщення від SafronenkoBuild проходить безпечно та швидко.</p>
+      </details>
+      <details>
+        <summary>Де розташовані ваші об'єкти? <i class="ph ph-caret-down" aria-hidden="true"></i></summary>
+        <p>Наші об'єкти розташовані в прохідних локаціях Київської області та Заходу України. Тут ви можете купити приміщення під бізнес із високим трафіком і стабільними орендарями.</p>
+      </details>
+      <details>
+        <summary>Які варіанти приміщень доступні для покупки? <i class="ph ph-caret-down" aria-hidden="true"></i></summary>
+        <p>Є стріт-ритейл, торгові комплекси, офісні простори. Ви можете купити приміщення під комерцію, яке приносить стабільний дохід або підходить для власного бізнесу.</p>
+      </details>
+      <details>
+        <summary>Як купити нежитлове приміщення без ризиків? <i class="ph ph-caret-down" aria-hidden="true"></i></summary>
+        <p>SafronenkoBuild гарантує повну юридичну перевірку та прозорі умови. У нас можна купити нежитлове приміщення, яке стане надійною інвестицією в стабільний дохід.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <img src="https://static.wixstatic.com/media/2292f6_9e4cab8a65dc476699ec46bc7fd0659e~mv2.png/v1/fill/w_370,h_140,al_c,q_90,enc_avif,quality_auto/gold3%201.png" alt="Safronenko Development" loading="lazy">
+        <p>Девелопер повного циклу. Стріт-ритейл і торгові центри з високим трафіком.</p>
+      </div>
+      <div class="f-col">
+        <h4>Навігація</h4>
+        <a href="#about">Про компанію</a>
+        <a href="#services">Послуги</a>
+        <a href="#projects">Проєкти</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="f-col">
+        <h4>Контакти</h4>
+        <a href="tel:+380730988989"><i class="ph ph-phone-call" aria-hidden="true"></i>073 098 89 89</a>
+        <a href="mailto:safronenkobuild@gmail.com"><i class="ph ph-envelope-simple" aria-hidden="true"></i>safronenkobuild@gmail.com</a>
+        <a><i class="ph ph-map-pin" aria-hidden="true"></i>вул. Басейна, буд. 9, кім. 3</a>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 SafronenkoBuild. Усі права захищено.</span>
+      <div class="f-social">
+        <a href="https://www.instagram.com/safronenko.development" target="_blank" rel="noopener" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61582012409370" target="_blank" rel="noopener" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= LIBS ================= -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js"}}</script>
+
+<!-- ================= UI / MOTION ================= -->
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* ---- smooth scroll ---- */
+  var lenis = null;
+  if(!reduce && window.Lenis){
+    lenis = new Lenis({duration:1.15, smoothWheel:true});
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(function(t){ lenis.raf(t*1000); });
+    gsap.ticker.lagSmoothing(0);
+  }
+  function scrollToEl(el){
+    if(lenis){ lenis.scrollTo(el, {offset:-64, duration:1.2}); }
+    else{ el.scrollIntoView({behavior: reduce ? 'auto' : 'smooth'}); }
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var el = document.querySelector(a.getAttribute('href'));
+      if(el){ e.preventDefault(); scrollToEl(el); closeMenu(); }
+    });
+  });
+
+  /* ---- nav hide/show ---- */
+  var nav = document.getElementById('nav');
+  ScrollTrigger.create({
+    start:'top top-=120',
+    onUpdate:function(self){
+      nav.classList.toggle('is-hidden', self.direction === 1 && !menuOpen);
+    }
+  });
+
+  /* ---- mobile menu ---- */
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('mobileMenu');
+  var menuOpen = false;
+  function closeMenu(){ menuOpen=false; menu.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }
+  burger.addEventListener('click', function(){
+    menuOpen = !menuOpen;
+    menu.classList.toggle('open', menuOpen);
+    burger.setAttribute('aria-expanded', String(menuOpen));
+    if(menuOpen) nav.classList.remove('is-hidden');
+  });
+
+  /* ---- hero intro ---- */
+  if(!reduce){
+    gsap.timeline({defaults:{ease:'power4.out'}})
+      .to('.hero h1 .l > span', {y:0, duration:1.1, stagger:.12, delay:.15})
+      .to('.hero-sub',  {opacity:1, y:0, duration:.9}, '-=.55')
+      .to('.hero-ctas', {opacity:1, y:0, duration:.9}, '-=.65')
+      .to('#scene', {opacity:1, duration:1.6, ease:'power2.out'}, 0);
+  }else{
+    document.querySelectorAll('.hero h1 .l > span').forEach(function(s){ s.style.transform='none'; });
+  }
+
+  /* ---- reveals ---- */
+  if(!reduce){
+    gsap.utils.toArray('[data-reveal]').forEach(function(el){
+      gsap.to(el, {
+        opacity:1, y:0, duration:1, ease:'power3.out',
+        scrollTrigger:{trigger:el, start:'top 84%', once:true}
+      });
+    });
+  }else{
+    document.querySelectorAll('[data-reveal]').forEach(function(el){ el.style.opacity=1; el.style.transform='none'; });
+  }
+
+  /* ---- counters ---- */
+  document.querySelectorAll('[data-count]').forEach(function(el){
+    var target = parseFloat(el.dataset.count);
+    var dec = parseInt(el.dataset.decimal || '0', 10);
+    if(reduce){ el.textContent = target.toFixed(dec).replace('.',','); return; }
+    var obj = {v:0};
+    gsap.to(obj, {
+      v:target, duration:1.8, ease:'power2.out',
+      scrollTrigger:{trigger:el, start:'top 88%', once:true},
+      onUpdate:function(){ el.textContent = obj.v.toFixed(dec).replace('.',','); }
+    });
+  });
+
+  /* ---- projects: horizontal pan (desktop), native swipe (mobile) ---- */
+  var mm = gsap.matchMedia();
+  mm.add('(min-width: 1024px) and (prefers-reduced-motion: no-preference)', function(){
+    var track = document.getElementById('projTrack');
+    var pin = document.getElementById('projPin');
+    var distance = function(){ return track.scrollWidth - window.innerWidth; };
+    var tween = gsap.to(track, {
+      x:function(){ return -distance(); },
+      ease:'none',
+      scrollTrigger:{
+        trigger:pin,
+        start:'top top',
+        end:function(){ return '+=' + distance(); },
+        pin:true,
+        scrub:1,
+        invalidateOnRefresh:true
+      }
+    });
+    return function(){ tween.scrollTrigger && tween.scrollTrigger.kill(); tween.kill(); gsap.set(track,{x:0}); };
+  });
+
+  /* ---- marquee: duplicate content for seamless loop ---- */
+  var mt = document.getElementById('marqueeTrack');
+  mt.innerHTML += mt.innerHTML;
+
+  /* ---- card tilt (fine pointers only) ---- */
+  if(!reduce && matchMedia('(pointer:fine)').matches){
+    document.querySelectorAll('.tilt').forEach(function(card){
+      var rx = gsap.quickTo(card, 'rotationX', {duration:.5, ease:'power3.out'});
+      var ry = gsap.quickTo(card, 'rotationY', {duration:.5, ease:'power3.out'});
+      gsap.set(card, {transformPerspective:900});
+      card.addEventListener('pointermove', function(e){
+        var r = card.getBoundingClientRect();
+        ry(((e.clientX - r.left)/r.width - .5) * 6);
+        rx(((e.clientY - r.top)/r.height - .5) * -6);
+      });
+      card.addEventListener('pointerleave', function(){ rx(0); ry(0); });
+    });
+  }
+
+  /* ---- FAQ: close others ---- */
+  var faqs = document.querySelectorAll('.faq details');
+  faqs.forEach(function(d){
+    d.addEventListener('toggle', function(){
+      if(d.open) faqs.forEach(function(o){ if(o!==d) o.open=false; });
+    });
+  });
+
+  /* ---- lead form -> FormSubmit (real email delivery) ---- */
+  var FORM_TO = 'avsafronenko@gmail.com';         // primary inbox (activation happens here)
+  var FORM_CC = 'safronenkobuild@gmail.com';      // company inbox gets a copy
+  document.getElementById('leadForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var f = e.target;
+    if(!f.reportValidity()) return;
+    if(f._honey.value) return; // spam bot filled the honeypot
+    var btn = document.getElementById('submitBtn');
+    var note = document.getElementById('formNote');
+    btn.disabled = true;
+    btn.textContent = 'Надсилаємо...';
+    fetch('https://formsubmit.co/ajax/' + FORM_TO, {
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({
+        'Ім\'я': f.name.value,
+        'Телефон': f.phone.value,
+        'Email': f.email.value,
+        'Коментар': f.message.value || '-',
+        _subject:'Заявка з сайту SafronenkoBuild',
+        _template:'table',
+        _captcha:'false',
+        _cc: FORM_CC
+      })
+    }).then(function(r){ return r.json(); }).then(function(res){
+      if(res.success === 'true' || res.success === true){
+        f.reset();
+        btn.textContent = 'Надіслано';
+        note.textContent = 'Дякуємо! Заявку отримано, ми зв\'яжемося з вами найближчим часом.';
+        note.style.color = 'var(--gold-2)';
+        setTimeout(function(){ btn.disabled=false; btn.textContent='Надіслати'; }, 4000);
+      }else{ throw new Error('formsubmit'); }
+    }).catch(function(){
+      btn.disabled = false;
+      btn.textContent = 'Надіслати';
+      note.textContent = 'Не вдалося надіслати онлайн. Відкриваємо лист у вашому поштовому клієнті.';
+      var body = 'Ім\'я: ' + f.name.value + '\nТелефон: ' + f.phone.value +
+                 '\nEmail: ' + f.email.value + '\nКоментар: ' + (f.message.value || '-');
+      location.href = 'mailto:' + FORM_CC
+        + '?subject=' + encodeURIComponent('Заявка з сайту SafronenkoBuild')
+        + '&body=' + encodeURIComponent(body);
+    });
+  });
+})();
+</script>
+
+<!-- ================= 3D SCENE (Three.js) ================= -->
+<script type="module">
+import * as THREE from 'three';
+
+const canvas = document.getElementById('scene');
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+let renderer;
+try{
+  renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true, powerPreference:'high-performance'});
+}catch(err){
+  canvas.remove(); // graceful: CSS gradient hero remains
+  throw err;
+}
+renderer.setPixelRatio(Math.min(devicePixelRatio, 1.75));
+
+const scene = new THREE.Scene();
+scene.fog = new THREE.FogExp2(0x080d1a, 0.030);
+
+const camera = new THREE.PerspectiveCamera(50, 2, 0.1, 220);
+camera.position.set(0, 5.6, 14.5);
+
+/* lights */
+scene.add(new THREE.HemisphereLight(0x2a3a60, 0x04060c, 1.0));
+const key = new THREE.DirectionalLight(0x93a7cf, 0.65);
+key.position.set(7, 14, 5);
+scene.add(key);
+const gold = new THREE.PointLight(0xc9a45c, 220, 60, 2);
+gold.position.set(-5, 9, -2);
+scene.add(gold);
+
+/* deterministic rng */
+function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const rng = mulberry32(20260718);
+
+/* ---- city of towers with a central avenue ---- */
+const towers = [];
+for(let gx=-6; gx<=6; gx++){
+  for(let gz=0; gz<16; gz++){
+    const x = gx*1.7 + (rng()-.5)*.5;
+    const z = -4 - gz*1.7 + (rng()-.5)*.5;
+    if(Math.abs(x) < 2.0) continue;                // the avenue
+    if(rng() < .18) continue;                       // gaps
+    const w = .8 + rng()*.7;
+    const d = .8 + rng()*.7;
+    const centerBoost = Math.max(0, 1 - Math.abs(Math.abs(x)-4)/4);
+    const h = .7 + Math.pow(rng(),1.6) * (3.2 + centerBoost*5.5);
+    towers.push({x, z, w, d, h});
+  }
+}
+
+/* solid dark blocks (instanced) */
+const boxGeo = new THREE.BoxGeometry(1,1,1);
+const boxMat = new THREE.MeshStandardMaterial({color:0x0d1730, roughness:.6, metalness:.35});
+const blocks = new THREE.InstancedMesh(boxGeo, boxMat, towers.length);
+const m4 = new THREE.Matrix4();
+towers.forEach((t,i)=>{
+  m4.compose(
+    new THREE.Vector3(t.x, t.h/2, t.z),
+    new THREE.Quaternion(),
+    new THREE.Vector3(t.w, t.h, t.d)
+  );
+  blocks.setMatrixAt(i, m4);
+});
+scene.add(blocks);
+
+/* gold wireframe edges (merged into one LineSegments) */
+const edgePts = [];
+function pushEdges(t){
+  const x0=t.x-t.w/2, x1=t.x+t.w/2, z0=t.z-t.d/2, z1=t.z+t.d/2, y0=0, y1=t.h;
+  const c=[[x0,y0,z0],[x1,y0,z0],[x1,y0,z1],[x0,y0,z1],[x0,y1,z0],[x1,y1,z0],[x1,y1,z1],[x0,y1,z1]];
+  const e=[[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]];
+  e.forEach(p=>{ edgePts.push(...c[p[0]], ...c[p[1]]); });
+}
+towers.forEach(pushEdges);
+const edgeGeo = new THREE.BufferGeometry();
+edgeGeo.setAttribute('position', new THREE.Float32BufferAttribute(edgePts, 3));
+const edges = new THREE.LineSegments(
+  edgeGeo,
+  new THREE.LineBasicMaterial({color:0xc9a45c, transparent:true, opacity:.5})
+);
+scene.add(edges);
+
+/* lit gold rooftops on a few towers */
+const litIdx = towers.map((t,i)=>({i,h:t.h})).sort((a,b)=>b.h-a.h).slice(0,10).map(o=>o.i);
+const capMat = new THREE.MeshStandardMaterial({color:0xc9a45c, emissive:0xc9a45c, emissiveIntensity:1.1, roughness:.4});
+const caps = new THREE.InstancedMesh(boxGeo, capMat, litIdx.length);
+litIdx.forEach((ti,i)=>{
+  const t = towers[ti];
+  m4.compose(
+    new THREE.Vector3(t.x, t.h + .035, t.z),
+    new THREE.Quaternion(),
+    new THREE.Vector3(t.w*.92, .07, t.d*.92)
+  );
+  caps.setMatrixAt(i, m4);
+});
+scene.add(caps);
+
+/* ground grid */
+const gridPts = [];
+const EXT = 46, STEP = 1.7;
+for(let i=-EXT; i<=EXT; i+=STEP){
+  gridPts.push(-EXT,0,i,  EXT,0,i);
+  gridPts.push(i,0,-EXT,  i,0,EXT);
+}
+const gridGeo = new THREE.BufferGeometry();
+gridGeo.setAttribute('position', new THREE.Float32BufferAttribute(gridPts,3));
+const grid = new THREE.LineSegments(
+  gridGeo,
+  new THREE.LineBasicMaterial({color:0xc9a45c, transparent:true, opacity:.10})
+);
+grid.position.y = -.01;
+scene.add(grid);
+
+/* floating gold dust */
+const N = 260;
+const pPos = new Float32Array(N*3);
+for(let i=0;i<N;i++){
+  pPos[i*3]   = (rng()-.5)*40;
+  pPos[i*3+1] = rng()*14;
+  pPos[i*3+2] = -rng()*34 + 4;
+}
+const pGeo = new THREE.BufferGeometry();
+pGeo.setAttribute('position', new THREE.BufferAttribute(pPos,3));
+const dust = new THREE.Points(pGeo, new THREE.PointsMaterial({
+  color:0xe2c078, size:.07, transparent:true, opacity:.55, sizeAttenuation:true, depthWrite:false
+}));
+scene.add(dust);
+
+/* ---- interaction state ---- */
+const mouse = {x:0, y:0, tx:0, ty:0};
+addEventListener('pointermove', e=>{
+  mouse.tx = (e.clientX/innerWidth  - .5);
+  mouse.ty = (e.clientY/innerHeight - .5);
+}, {passive:true});
+
+let scrollP = 0; // 0..1 hero exit progress
+const hero = document.getElementById('hero');
+function updateScroll(){
+  const r = hero.getBoundingClientRect();
+  scrollP = Math.min(1, Math.max(0, -r.top / (r.height || 1)));
+}
+addEventListener('scroll', ()=>{}, {passive:true}); // noop; real read happens per-frame (cheap getBoundingClientRect)
+
+/* ---- resize ---- */
+function resize(){
+  const w = hero.clientWidth, h = hero.clientHeight;
+  renderer.setSize(w, h, false);
+  camera.aspect = w/h;
+  camera.updateProjectionMatrix();
+}
+addEventListener('resize', resize);
+resize();
+
+/* ---- render loop ---- */
+const LOOK = new THREE.Vector3(0, 2.4, -8);
+let visible = true, t0 = performance.now();
+new IntersectionObserver(en=>{ visible = en[0].isIntersecting; }, {threshold:0}).observe(hero);
+
+function frame(now){
+  const t = (now - t0)/1000;
+  updateScroll();
+
+  mouse.x += (mouse.tx - mouse.x)*.05;
+  mouse.y += (mouse.ty - mouse.y)*.05;
+
+  camera.position.x = Math.sin(t*.07)*1.1 + mouse.x*2.2;
+  camera.position.y = 5.6 + mouse.y*-1.1 + scrollP*4.5;
+  camera.position.z = 14.5 - scrollP*7;
+  camera.lookAt(LOOK);
+
+  caps.material.emissiveIntensity = 1.0 + Math.sin(t*1.6)*.25;
+
+  const pos = dust.geometry.attributes.position;
+  for(let i=0;i<N;i++){
+    let y = pos.getY(i) + .0045;
+    if(y > 14) y = 0;
+    pos.setY(i, y);
+  }
+  pos.needsUpdate = true;
+
+  renderer.render(scene, camera);
+}
+
+if(reduce){
+  resize();
+  frame(performance.now()); // single static frame
+}else{
+  renderer.setAnimationLoop(now=>{
+    if(visible && !document.hidden) frame(now);
+  });
+}
+</script>
+</body>
+</html>
